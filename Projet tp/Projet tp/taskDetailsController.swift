@@ -33,9 +33,9 @@ class taskDetailsController: UIViewController{
                 dateLabel.text = dateFormat
                 
             } else {
-                nameLabel.text = "Erreur"
-                descLabel.text = "Erreur"
-                barDetails.title = "Erreur"
+                nameLabel.text = "Error"
+                descLabel.text = "Error"
+                barDetails.title = "Error"
             }
 
             

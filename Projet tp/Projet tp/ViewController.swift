@@ -57,7 +57,8 @@ class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate
         @IBAction func Save(_ unwindSegue: UIStoryboardSegue) {
             if let vc = unwindSegue.source as? AddController {
                 
-                tasks.append(Todo(name: vc.name.text!, description: vc.desc.text!, date: vc.date.date, cat: category ?? todoCategory(nom: "Aucune categorie")))
+                tasks.append(Todo(name: vc.name.text!, description: vc.desc.text!, date: vc.date.date, cat:
+                                    category ?? todoCategory(nom: "No category")))
                 tasks = tasks.sorted(by: { $0.date < $1.date})
                 filteredData = tasks
                 tableView.reloadData()
