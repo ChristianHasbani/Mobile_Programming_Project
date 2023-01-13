@@ -1,8 +1,8 @@
 //
-//  ViewControllerCategory.swift
+//  ViewController.swift
 //  Projet tp
 //
-//  Created by Raif El Sayed on 29/12/2022.
+//  Created by Christian Hasbani on 07/11/2022.
 //
 
 import UIKit
@@ -15,11 +15,10 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        myDataCategory.append(todoCategory(nom: "business")) // creation de la categorie business
-        myDataCategory.append(todoCategory(nom: "home")) // creation de la categorie home
+        myDataCategory.append(todoCategory(nom: "Work"))
+        myDataCategory.append(todoCategory(nom: "Travel"))
 
         
-        // Do any additional setup after loading the view.
         tableViewCell.dataSource = self
 
     }
@@ -28,7 +27,7 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
         return myDataCategory.count
     }
     
-    // Initialise la tableview
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
         cell.nameLabel.text = myDataCategory[indexPath.row].name
@@ -36,14 +35,14 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
         return cell
     }
     
-    //Permet de supprimer une category
+    //Delete a category from the tableview
     @IBAction func deleteTodoCat(_ sender: UIButton) {
         let row = sender.tag
         myDataCategory.remove(at: row)
         tableViewCell.reloadData()
     }
     
-    //permet d'ajouter une category
+    //add a category to the tableview
     @IBAction func Save(_ unwindSegue: UIStoryboardSegue) {
         if let vc = unwindSegue.source as? addCategoryController {
             
@@ -51,10 +50,9 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
 
             tableViewCell.reloadData()
         }
-        // Use data from the view controller which initiated the unwind segue
     }
     
-    //Permet d'envoyer la categorie pour afficher ses todo
+    //Send all the tasks for that category
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ViewController {
             let row = tableViewCell.indexPathForSelectedRow!.row

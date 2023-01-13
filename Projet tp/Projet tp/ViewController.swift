@@ -2,12 +2,12 @@
 //  ViewController.swift
 //  Projet tp
 //
-//  Created by Raif El Sayed on 07/11/2022.
+//  Created by Christian Hasbani on 07/11/2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate{ // Controller de la page des todo d'une category
+class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bar: UINavigationItem!
@@ -17,9 +17,8 @@ class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        bar.title = category?.name //nom de la page = nom de la category
-        tasks = tasks.sorted(by: { $0.date < $1.date}) // on trie les todo par ordre des dates
+        bar.title = category?.name
+        tasks = tasks.sorted(by: { $0.date < $1.date})
         filteredData = tasks
         tableView.dataSource = self
         searchBar.delegate = self
@@ -29,7 +28,7 @@ class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate
         return filteredData.count
     }
     
-    //Initialise la tableview
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
         cell.nameLabel.text = filteredData[indexPath.row].name
@@ -38,15 +37,15 @@ class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate
         
     }
     
-    //Permet d'envoyer les informations d'une tache sur sa page de details
+    //Send information for the details controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? DetailTacheController {
+        if let vc = segue.destination as? taskDetailsController {
             let row = tableView.indexPathForSelectedRow!.row
             vc.data = filteredData[row]
         }
     }
     
-    //Permet de supprimer une todo
+    //Delete a todo task
     @IBAction func deleteTODO(_ sender: UIButton) {
         let row = sender.tag
         filteredData.remove(at: row)
@@ -54,7 +53,7 @@ class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate
         tableView.reloadData()
     }
     
-        //Permet d'ajouter une nouvelle todo
+        //save a new todo task to the list
         @IBAction func Save(_ unwindSegue: UIStoryboardSegue) {
             if let vc = unwindSegue.source as? AddController {
                 
@@ -63,10 +62,9 @@ class ViewController: UIViewController,UITableViewDataSource,UISearchBarDelegate
                 filteredData = tasks
                 tableView.reloadData()
             }
-            // Use data from the view controller which initiated the unwind segue
         }
  
-    
+    // Search in the table view
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredData = []
         for task in tasks{

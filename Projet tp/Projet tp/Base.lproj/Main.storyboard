@@ -107,12 +107,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="103.79464285714285"/>
+            <point key="canvasLocation" x="607" y="615"/>
         </scene>
-        <!--Detail Tache Controller-->
+        <!--Task Details Controller-->
         <scene sceneID="9IW-4P-tVV">
             <objects>
-                <viewController id="HV9-V7-c6P" customClass="DetailTacheController" customModule="Projet_tp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HV9-V7-c6P" customClass="taskDetailsController" customModule="Projet_tp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y5B-UP-bN3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flg-Lz-jVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="839.73214285714278"/>
+            <point key="canvasLocation" x="1686" y="990"/>
         </scene>
         <!--Add Controller-->
         <scene sceneID="49j-Kp-z9o">
@@ -261,7 +261,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XeZ-hm-tUV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-257" y="-41"/>
         </scene>
         <!--Add Category Controller-->
         <scene sceneID="Y3L-5e-jwS">
@@ -309,7 +309,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piq-bO-ymU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uTW-0r-hZ5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-635" y="854"/>
+            <point key="canvasLocation" x="523" y="1628"/>
         </scene>
         <!--Category-->
         <scene sceneID="97d-Lr-E32">
@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6u-PG-eZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156.52173913043478" y="853.79464285714278"/>
+            <point key="canvasLocation" x="-575" y="838"/>
         </scene>
     </scenes>
     <resources>

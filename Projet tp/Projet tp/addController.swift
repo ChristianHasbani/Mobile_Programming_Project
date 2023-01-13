@@ -1,11 +1,11 @@
 //
-//  addController.swift
+//  ViewController.swift
 //  Projet tp
 //
-//  Created by Raif El Sayed on 07/11/2022.
+//  Created by Christian Hasbani on 07/11/2022.
 //
 import UIKit
-//class permettant d'ajouter une nouvelle todo
+
 class AddController: UIViewController{
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var addBtn: UIButton!

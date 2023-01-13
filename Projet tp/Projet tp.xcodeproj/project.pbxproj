@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D897E7A292126B40017A37C /* addController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D897E79292126B40017A37C /* addController.swift */; };
-		1D897E7C29212B860017A37C /* detailTacheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D897E7B29212B860017A37C /* detailTacheController.swift */; };
+		1D897E7C29212B860017A37C /* taskDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D897E7B29212B860017A37C /* taskDetailsController.swift */; };
 		1DD778BF295DF141001D24B5 /* todoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD778BE295DF141001D24B5 /* todoCategory.swift */; };
 		1DD778C1295DF31C001D24B5 /* ViewControllerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD778C0295DF31C001D24B5 /* ViewControllerCategory.swift */; };
 		1DF8559C295DFB3A00D91A52 /* addCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF8559B295DFB3A00D91A52 /* addCategoryController.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		1D897E79292126B40017A37C /* addController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addController.swift; sourceTree = "<group>"; };
-		1D897E7B29212B860017A37C /* detailTacheController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTacheController.swift; sourceTree = "<group>"; };
+		1D897E7B29212B860017A37C /* taskDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskDetailsController.swift; sourceTree = "<group>"; };
 		1DD778BE295DF141001D24B5 /* todoCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoCategory.swift; sourceTree = "<group>"; };
 		1DD778C0295DF31C001D24B5 /* ViewControllerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCategory.swift; sourceTree = "<group>"; };
 		1DF8559B295DFB3A00D91A52 /* addCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addCategoryController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				F953D05F291934BF007034CC /* Todo.swift */,
 				1D897E79292126B40017A37C /* addController.swift */,
 				1DF8559B295DFB3A00D91A52 /* addCategoryController.swift */,
-				1D897E7B29212B860017A37C /* detailTacheController.swift */,
+				1D897E7B29212B860017A37C /* taskDetailsController.swift */,
 				1DD778BE295DF141001D24B5 /* todoCategory.swift */,
 			);
 			path = "Projet tp";
@@ -163,7 +163,7 @@
 				1D897E7A292126B40017A37C /* addController.swift in Sources */,
 				F953D04F29193195007034CC /* ViewController.swift in Sources */,
 				F953D04B29193195007034CC /* AppDelegate.swift in Sources */,
-				1D897E7C29212B860017A37C /* detailTacheController.swift in Sources */,
+				1D897E7C29212B860017A37C /* taskDetailsController.swift in Sources */,
 				F953D04D29193195007034CC /* SceneDelegate.swift in Sources */,
 				F953D060291934BF007034CC /* Todo.swift in Sources */,
 				1DD778C1295DF31C001D24B5 /* ViewControllerCategory.swift in Sources */,

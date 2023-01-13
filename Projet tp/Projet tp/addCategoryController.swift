@@ -1,12 +1,12 @@
 //
-//  addCategoryController.swift
+//  ViewController.swift
 //  Projet tp
 //
-//  Created by Raif El Sayed on 29/12/2022.
+//  Created by Christian Hasbani on 07/11/2022.
 //
 
 import UIKit
-//class permettant d'ajouter une nouvellle category
+
 class addCategoryController: UIViewController {
 
     @IBOutlet weak var addBtn: UIButton!
