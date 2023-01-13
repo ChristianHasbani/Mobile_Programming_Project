@@ -7,10 +7,10 @@
 import UIKit
 //class permettant d'ajouter une nouvelle todo
 class AddController: UIViewController{
-    @IBOutlet weak var nomTacheAdd: UITextField!
-    @IBOutlet weak var buttonValiderAdd: UIButton!
-    @IBOutlet weak var dateAdd: UIDatePicker!
-    @IBOutlet weak var nomDescriptionAdd: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var date: UIDatePicker!
+    @IBOutlet weak var desc: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

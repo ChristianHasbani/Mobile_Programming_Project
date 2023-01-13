@@ -9,10 +9,10 @@ import UIKit
 
 //class permettant de gerer l'affichage du detail d'une todo
 class DetailTacheController: UIViewController{
-    @IBOutlet weak var tache: UILabel!
-    @IBOutlet weak var myDescription: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var barreCobtrole: UINavigationItem!
+    @IBOutlet weak var barDetails: UINavigationItem!
     
     var data: Todo?
 
@@ -20,9 +20,9 @@ class DetailTacheController: UIViewController{
             super.viewDidLoad()
             
             if let todo = data { //si on a recuperer une todo
-                tache.text = todo.nom // on affiche son nom
-                myDescription.text = todo.description // on affiche sa description
-                barreCobtrole.title = todo.nom // on change le titre de la page avec son nom
+                nameLabel.text = todo.name // on affiche son nom
+                descLabel.text = todo.description // on affiche sa description
+                barDetails.title = todo.name // on change le titre de la page avec son nom
                 
                 // on convertit la date au bon format
                 let dateFormater = DateFormatter()
@@ -32,9 +32,9 @@ class DetailTacheController: UIViewController{
                 dateLabel.text = dateFormat // on affiche la date
                 
             } else { // sinon on adffche une erreur
-                tache.text = "Erreur"
-                myDescription.text = "Erreur"
-                barreCobtrole.title = "Erreur"
+                nameLabel.text = "Erreur"
+                descLabel.text = "Erreur"
+                barDetails.title = "Erreur"
             }
 
             // Do any additional setup after loading the view.

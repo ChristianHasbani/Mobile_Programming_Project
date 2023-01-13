@@ -9,8 +9,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell { // Permet de gerer une cell d'une tableview
 
-    @IBOutlet weak var btnDelete: UIButton!
-    @IBOutlet weak var mynom: UILabel!
+    @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewControllerCategory: UIViewController,UITableViewDataSource { //Controller des category
 
-    @IBOutlet weak var tbCell: UITableView!
+    @IBOutlet weak var tableViewCell: UITableView!
     
     var myDataCategory:[todoCategory]=[]
 
@@ -20,7 +20,7 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
 
         
         // Do any additional setup after loading the view.
-        tbCell.dataSource = self
+        tableViewCell.dataSource = self
 
     }
     
@@ -31,8 +31,8 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
     // Initialise la tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell
-        cell.mynom.text = myDataCategory[indexPath.row].nom
-        cell.btnDelete.tag = indexPath.row
+        cell.nameLabel.text = myDataCategory[indexPath.row].name
+        cell.deleteBtn.tag = indexPath.row
         return cell
     }
     
@@ -40,16 +40,16 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
     @IBAction func deleteTodoCat(_ sender: UIButton) {
         let row = sender.tag
         myDataCategory.remove(at: row)
-        tbCell.reloadData()
+        tableViewCell.reloadData()
     }
     
     //permet d'ajouter une category
     @IBAction func Save(_ unwindSegue: UIStoryboardSegue) {
         if let vc = unwindSegue.source as? addCategoryController {
             
-            myDataCategory.append(todoCategory(nom: vc.mycat.text!))
+            myDataCategory.append(todoCategory(nom: vc.categoryName.text!))
 
-            tbCell.reloadData()
+            tableViewCell.reloadData()
         }
         // Use data from the view controller which initiated the unwind segue
     }
@@ -57,9 +57,9 @@ class ViewControllerCategory: UIViewController,UITableViewDataSource { //Control
     //Permet d'envoyer la categorie pour afficher ses todo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ViewController {
-            let row = tbCell.indexPathForSelectedRow!.row
-            vc.dataCat = myDataCategory[row]
-            vc.myData = myDataCategory[row].myData
+            let row = tableViewCell.indexPathForSelectedRow!.row
+            vc.category = myDataCategory[row]
+            vc.filteredData = myDataCategory[row].tasks
         }
     }
     

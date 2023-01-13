@@ -65,8 +65,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="btnDelete" destination="rIb-sG-RhB" id="rvQ-aT-QG1"/>
-                                            <outlet property="mynom" destination="CUq-IM-9vX" id="OP3-I7-uif"/>
+                                            <outlet property="deleteBtn" destination="rIb-sG-RhB" id="rvQ-aT-QG1"/>
+                                            <outlet property="nameLabel" destination="CUq-IM-9vX" id="OP3-I7-uif"/>
                                             <segue destination="HV9-V7-c6P" kind="show" id="5zT-tT-Nez"/>
                                         </connections>
                                     </tableViewCell>
@@ -100,9 +100,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="barreControle" destination="v0K-Ps-0Aj" id="SXU-nb-yC4"/>
+                        <outlet property="bar" destination="v0K-Ps-0Aj" id="SXU-nb-yC4"/>
                         <outlet property="searchBar" destination="j9t-17-emc" id="M7g-PJ-Rfm"/>
-                        <outlet property="tabview1" destination="cy3-9R-cgE" id="N3F-bX-MAU"/>
+                        <outlet property="tableView" destination="cy3-9R-cgE" id="N3F-bX-MAU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -165,10 +165,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="9xc-jU-Ig0"/>
                     <connections>
-                        <outlet property="barreCobtrole" destination="9xc-jU-Ig0" id="hXn-d8-qIE"/>
+                        <outlet property="barDetails" destination="9xc-jU-Ig0" id="hXn-d8-qIE"/>
                         <outlet property="dateLabel" destination="hRz-d8-9xm" id="PuO-4q-1QO"/>
-                        <outlet property="myDescription" destination="cDh-AX-I2k" id="4yY-Gc-dRC"/>
-                        <outlet property="tache" destination="HdC-R3-bua" id="1b6-Z4-CYm"/>
+                        <outlet property="descLabel" destination="cDh-AX-I2k" id="4yY-Gc-dRC"/>
+                        <outlet property="nameLabel" destination="HdC-R3-bua" id="1b6-Z4-CYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flg-Lz-jVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -234,10 +234,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q33-YC-aEk"/>
                     <connections>
-                        <outlet property="buttonValiderAdd" destination="zOe-hO-CwV" id="5kg-EY-OYL"/>
-                        <outlet property="dateAdd" destination="zXJ-dK-kTu" id="bhf-hs-5eh"/>
-                        <outlet property="nomDescriptionAdd" destination="wBO-4q-rUI" id="3Wh-2m-ySl"/>
-                        <outlet property="nomTacheAdd" destination="Y7L-yC-4D7" id="0hN-8q-bRW"/>
+                        <outlet property="addBtn" destination="zOe-hO-CwV" id="5kg-EY-OYL"/>
+                        <outlet property="date" destination="zXJ-dK-kTu" id="bhf-hs-5eh"/>
+                        <outlet property="desc" destination="wBO-4q-rUI" id="3Wh-2m-ySl"/>
+                        <outlet property="name" destination="Y7L-yC-4D7" id="0hN-8q-bRW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyo-u9-WmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -302,8 +302,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="DP6-Wh-V8v"/>
                     <connections>
-                        <outlet property="addCat" destination="dSJ-2T-mw7" id="Ecc-rz-rgT"/>
-                        <outlet property="mycat" destination="4YW-aj-nFo" id="9AM-NB-w4T"/>
+                        <outlet property="addBtn" destination="dSJ-2T-mw7" id="Ecc-rz-rgT"/>
+                        <outlet property="categoryName" destination="4YW-aj-nFo" id="9AM-NB-w4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piq-bO-ymU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,8 +364,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="btnDelete" destination="p7o-ah-kJN" id="u7f-DO-d51"/>
-                                            <outlet property="mynom" destination="ZGw-hO-WfQ" id="yne-zf-fXy"/>
+                                            <outlet property="deleteBtn" destination="p7o-ah-kJN" id="u7f-DO-d51"/>
+                                            <outlet property="nameLabel" destination="ZGw-hO-WfQ" id="yne-zf-fXy"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="h0d-Cl-T2G"/>
                                         </connections>
                                     </tableViewCell>
@@ -388,7 +388,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tbCell" destination="cdV-pz-gxL" id="kls-oI-Mdu"/>
+                        <outlet property="tableViewCell" destination="cdV-pz-gxL" id="kls-oI-Mdu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6u-PG-eZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

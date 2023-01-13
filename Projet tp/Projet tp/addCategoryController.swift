@@ -9,8 +9,8 @@ import UIKit
 //class permettant d'ajouter une nouvellle category
 class addCategoryController: UIViewController {
 
-    @IBOutlet weak var addCat: UIButton!
-    @IBOutlet weak var mycat: UITextField!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var categoryName: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
